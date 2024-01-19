@@ -13,19 +13,26 @@ class HandRule(Algorithm):
 
 
 class LeftHandRule(HandRule):
+    def check_end_point(self, current_position):
+        if (current_position[0] == CENTER and current_position[0] == CENTER) or (
+                current_position[0] == CENTER - 1 and current_position[0] == CENTER - 1) or (
+                current_position[0] == CENTER - 1 and current_position[0] == CENTER) or (
+                current_position[0] == CENTER and current_position[0] == CENTER - 1):
+            return True
 
     def execute(self):
-        API.ackReset()
+        # API.ackReset()
         API.log("LEFT HAND RULE RUNNING...")
-
 
         current_position = [0, 0]
         row, col = current_position
 
         while True:
-            if current_position[0] == CENTER and current_position[1] == CENTER:
-                API.log('GG')
-                break
+
+            # if self.check_end_point(current_position):
+            #     break
+
+            # API.setColor(current_position[1], current_position[0], 'B')
 
             if not API.wallLeft():
                 API.turnLeft()
@@ -33,31 +40,45 @@ class LeftHandRule(HandRule):
             while API.wallFront():
                 API.turnRight()
                 current_position[0] += 1
+                # API.setColor(current_position[1], current_position[0], 'G')
+
             API.moveForward()
-            current_position[1] += 1
-        time.sleep(5)
+            current_position[0] += 1
+
+            # API.setColor(current_position[1], current_position[0], 'G')
 
 
 class RightHandRule(HandRule):
+    def check_end_point(self, current_position):
+        if (current_position[0] == CENTER and current_position[0] == CENTER) or (
+                current_position[0] == CENTER - 1 and current_position[0] == CENTER - 1) or (
+                current_position[0] == CENTER - 1 and current_position[0] == CENTER) or (
+                current_position[0] == CENTER and current_position[0] == CENTER - 1):
+            return True
 
     def execute(self):
-        API.ackReset()
+
+        # API.ackReset()
         API.log("RIGHT HAND RULE RUNNING...")
 
         current_position = [0, 0]
         row, col = current_position
 
         while True:
-            if current_position[0] == CENTER and current_position[1] == CENTER:
-                API.log('GG')
+
+            if self.check_end_point(current_position):
                 break
 
             if not API.wallRight():
                 API.turnRight()
                 current_position[0] += 1
+                API.setColor(current_position[1], current_position[0], 'G')
+
             while API.wallFront():
                 API.turnLeft()
                 current_position[0] -= 1
+                API.setColor(current_position[1], current_position[0], 'G')
+
             API.moveForward()
             current_position[1] += 1
-
+            API.setColor(current_position[1], current_position[0], 'G')

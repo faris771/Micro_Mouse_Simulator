@@ -30,9 +30,9 @@ def main():
     rightHandRule = RightHandRule()
 
 
-    floodfill.execute()
+    # floodfill.execute()
     # time.sleep(3)
-    # leftHandRule.execute()
+    leftHandRule.execute()
     # time.sleep(3)
     # rightHandRule = RightHandRule()
     # rightHandRule.execute()

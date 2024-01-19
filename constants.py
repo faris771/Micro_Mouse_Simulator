@@ -17,3 +17,15 @@ MAZE_SETTINGS = [
     [14, 13, 12, 11, 10, 9, 8, 7, 7, 8, 9, 10, 11, 12, 13, 14]
 ]
 CENTER = len(MAZE_SETTINGS) // 2
+
+
+"""
+
+    def check_end_point(self, current_position):
+        if (current_position[0] == CENTER and current_position[0] == CENTER) or (
+                current_position[0] == CENTER - 1 and current_position[0] == CENTER - 1) or (
+                current_position[0] == CENTER - 1 and current_position[0] == CENTER) or (
+                current_position[0] == CENTER and current_position[0] == CENTER - 1):
+            return True
+
+"""
