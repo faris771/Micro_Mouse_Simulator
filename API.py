@@ -1,5 +1,9 @@
 import sys
 
+def log(string):
+    sys.stderr.write("{}\n".format(string))
+    sys.stderr.flush()
+
 class MouseCrashedError(Exception):
     pass
 
@@ -109,8 +113,8 @@ def clearText(x, y):
 def clearAllText():
     command(args=["clearAllText"])
 
-def wasReset():
+def wasReset(): # Returns True if the mouse was reset
     return command(args=["wasReset"], return_type=bool)
 
-def ackReset():
+def ackReset(): # Must be called after wasReset() returns True
     command(args=["ackReset"], return_type=str)
