@@ -31,6 +31,6 @@ Linux (Ubuntu):
 - The example code is a simple left wall following algorithm
 
 ## Contributors
-* ![Faris Abufarha](https://github.com/faris771)
-* ![Omar Masalmah](https://github.com/Omarmasalmah)
-* ![Aseel Shadid](https://github.com/aseelshadid)
+* [Faris Abufarha](https://github.com/faris771)
+* [Omar Masalmah](https://github.com/Omarmasalmah)
+* [Aseel Shadid](https://github.com/aseelshadid)
