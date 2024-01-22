@@ -29,3 +29,8 @@ Linux (Ubuntu):
 - Communication with the simulator is done via stdin/stdout, use stderr for logging
 - Descriptions of all available API methods can be found at [mackorone/mms#mouse-api](https://github.com/mackorone/mms#mouse-api)
 - The example code is a simple left wall following algorithm
+
+## Contributors
+* ![Faris Abufarha](https://github.com/faris771)
+* ![Omar Masalmah](https://github.com/Omarmasalmah)
+* ![Aseel Shadid](https://github.com/aseelshadid)
